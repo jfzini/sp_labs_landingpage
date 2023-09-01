@@ -1,10 +1,9 @@
-import Header from './LandingPage/Header/Header';
 import Hero from './LandingPage/Hero/Hero';
+import './App.sass';
 
 function App() {
   return (
     <>
-      <Header />
       <Hero />
     </>
   );
