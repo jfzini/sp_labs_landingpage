@@ -3,9 +3,9 @@ import './App.sass';
 
 function App() {
   return (
-    <>
+    <div className='page__container'>
       <Hero />
-    </>
+    </div>
   );
 }
 
