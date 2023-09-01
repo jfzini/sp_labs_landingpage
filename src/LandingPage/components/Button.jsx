@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Button({content}) {
   return (
-    <button>
+    <button className='regular-button'>
       {content}
     </button>
   )

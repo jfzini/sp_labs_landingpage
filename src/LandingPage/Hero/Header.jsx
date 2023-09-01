@@ -5,12 +5,16 @@ import Anchor from '../components/Anchor';
 export default function Header() {
   const navAnchors = ['Cases', 'Contato'];
   return (
-    <header className='header__container'>
+    <header className="header__container">
       <a href="#">
         <img src={logoWhite} alt="SP Labs Logo" className="header__img--logo" />
       </a>
       <nav>
-        <ul className='nav__ul'>{navAnchors.map((anchor) => Anchor(anchor))}</ul>
+        <ul className="nav__ul">
+          {navAnchors.map((anchor) => (
+            <Anchor key={anchor} name={anchor} />
+          ))}
+        </ul>
       </nav>
     </header>
   );

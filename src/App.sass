@@ -6,8 +6,6 @@ $zinc-300: #E5E5E5
 $zinc-200: #EFEFEF
 $zinc-seethrough: #1E1E1E77
 $white: #FFFFFF
-$big-text: 4rem
-
 
 .hero__container
   display: flex
@@ -16,7 +14,7 @@ $big-text: 4rem
   align-items: center
   justify-content: space-between
   flex-direction: column
-  padding: 42px 100px
+  padding: 42px 30px
   ::before
     content: ""
     position: absolute
@@ -26,7 +24,8 @@ $big-text: 4rem
     height: 100%
     background: linear-gradient($zinc-seethrough, $zinc-seethrough), url(./assets/bg-picture.png)
     background-size: cover
-    filter: blur(1px) grayscale(100%)
+    background-position: center
+    filter: blur(0.8px) grayscale(100%)
     z-index: -1
 
 .header__container
@@ -52,6 +51,7 @@ $big-text: 4rem
       font-weight: 500
       border-bottom: 1px solid transparent
       transition: all 0.3s ease-in-out
+      cursor: default
       &:hover
         border-bottom: 1px solid $white
 
@@ -59,18 +59,19 @@ $big-text: 4rem
   height: 46px
 
 .hero--content
-  width: 640px
+  width: 330px
   color: $white
   align-self: flex-start
 
 .hero--title
-  font-size: $big-text
+  font-size: 3.5rem
   font-weight: 700
   line-height: 72px
-  letter-spacing: -0.96px
+  letter-spacing: -0.44px
   text-align: left
   .bodoni
-    font-size: $big-text * 1.05 // This is needed because the font is a bit smaller than the Roboto font. https://www.semprocesso.com.br/brand/tipografia
+    font-size: 3.5rem * 1.05 // This is needed because the font is a bit smaller than the Roboto font. https://www.semprocesso.com.br/brand/tipografia
+    letter-spacing: -1.095px
 
 .hero__p
   margin-block: 16px
@@ -79,3 +80,37 @@ $big-text: 4rem
   font-weight: 600
   line-height: 30px
   letter-spacing: -0.27px
+
+.regular-button
+  padding: 12px 32px
+  width: 100%
+  border: none
+  border-radius: 4px
+  background-color: $teal-300
+  color: $zinc-800
+  font-size: 14px
+  font-weight: 500
+  line-height: 150%
+  letter-spacing: 1.4px
+  text-transform: uppercase
+  transition: all 0.3s ease-in-out
+  &:hover
+    background-color: $teal-500
+
+
+@media (min-width: 768px)
+
+  .hero__container
+    padding: 42px 100px
+
+  .hero--content
+    width: 640px
+
+  .hero--title
+    font-size: 4rem
+    letter-spacing: -0.96px
+    .bodoni
+      font-size: 4rem * 1.05 // This is needed because the font is a bit smaller than the Roboto font. https://www.semprocesso.com.br/brand/tipografia
+  
+  .regular-button
+    width: auto
