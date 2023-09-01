@@ -1,10 +1,13 @@
+import Header from './LandingPage/Header/Header';
+import Hero from './LandingPage/Hero/Hero';
+
 function App() {
- 
   return (
     <>
-     Landing Page
+      <Header />
+      <Hero />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
