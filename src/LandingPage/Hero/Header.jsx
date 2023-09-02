@@ -5,7 +5,7 @@ import Anchor from '../components/Anchor';
 export default function Header() {
   const navAnchors = ['Cases', 'Contato'];
   return (
-    <header className="header__container">
+    <header className="header--container">
       <a href="#">
         <img src={logoWhite} alt="SP Labs Logo" className="header__img--logo" />
       </a>

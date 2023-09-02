@@ -1,17 +1,38 @@
 @import variables
   
 .button
-  padding: 12px 32px
-  width: 100%
-  border: none
   border-radius: 4px
-  background-color: $teal-300
   color: $zinc-800
   font-size: 14px
-  font-weight: 500
   line-height: 150%
-  letter-spacing: 1.4px
   text-transform: uppercase
   transition: all 0.3s ease-in-out
+
+.button--regular
+  background-color: $teal-300
+  border: none
+  letter-spacing: 1.4px
+  padding: 12px 32px
+  width: 100%
   &:hover
     background-color: $teal-500
+
+.button--small
+  display: flex
+  flex-shrink: 0
+  width: 158px
+  align-items: center
+  border: 1px solid $zinc-400
+  padding: 8px 0px 8px 24px
+  span
+    margin-right: 8px
+  img
+    transition: all 0.3s ease-in-out
+  &:hover
+    border: 1px solid $zinc-800
+    img
+      transform: translateX(4px)
+
+@media (min-width: 768px)
+  .button--regular
+    width: auto

@@ -1,6 +1,6 @@
 @import variables
 
-.hero__container
+.hero--container
   display: flex
   position: relative
   height: 100vh
@@ -21,7 +21,7 @@
     filter: blur(0.8px) grayscale(100%)
     z-index: -1
 
-.header__container
+.header--container
   display: flex
   justify-content: space-between
   align-items: center
@@ -39,9 +39,7 @@
       margin-right: 0
     .nav__anchor
       color: $white
-      text-decoration: none
       font-size: 1rem
-      font-weight: 500
       border-bottom: 1px solid transparent
       transition: all 0.3s ease-in-out
       cursor: default
@@ -59,25 +57,17 @@
 .hero--title
   font-size: 3.5rem
   font-weight: 700
-  line-height: 72px
+  line-height: 4.5rem
   letter-spacing: -0.44px
   text-align: left
   .bodoni
     font-size: 3.5rem * 1.05 // This is needed because the font is a bit smaller than the Roboto font. https://www.semprocesso.com.br/brand/tipografia
     letter-spacing: -1.095px
 
-.hero__p
-  margin-block: 16px
-  font-size: 18px
-  font-style: normal
-  font-weight: 600
-  line-height: 30px
-  letter-spacing: -0.27px
-
 
 @media (min-width: 768px)
 
-  .hero__container
+  .hero--container
     padding: 42px 100px
 
   .hero--content
@@ -88,6 +78,3 @@
     letter-spacing: -0.96px
     .bodoni
       font-size: 4rem * 1.05 // This is needed because the font is a bit smaller than the Roboto font. https://www.semprocesso.com.br/brand/tipografia
-  
-  .regular-button
-    width: auto

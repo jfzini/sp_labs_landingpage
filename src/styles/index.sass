@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800&family=Montserrat:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap')
-
+@import variables
 // this custom font is necessarybecause Google Fonts doesn't have the same version of Bodoni indicated in https://www.semprocesso.com.br/brand/tipografia
 @font-face
   font-family: 'Bodoni'
@@ -14,5 +14,34 @@
   font-family: 'Roboto', sans-serif
 
 .bodoni
-  font-family: 'Bodoni', serif
+  font-family: 'Bodoni', 'Bodoni Moda', serif
+  font-style: italic
   font-weight: normal
+
+.strike-through
+  text-decoration: line-through 2px
+
+.italic
+  font-style: italic
+
+.semi-bold
+  font-weight: 500
+
+.bold
+  font-weight: 600
+
+.extra-bold
+  font-weight: 700
+
+.paragraph
+  margin-block: 16px
+  font-size: 1.125rem
+  font-style: normal
+  line-height: 1.875rem
+  letter-spacing: -0.27px
+
+.soft-black
+  color: $soft-black
+
+.no-decoration
+  text-decoration: none
