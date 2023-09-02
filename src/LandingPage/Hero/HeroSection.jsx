@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from '../components/Button';
+import RegularButton from '../components/RegularButton';
 import Header from './Header';
 import '../../styles/Hero.sass';
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="hero__container">
       <Header />
@@ -14,7 +14,7 @@ export default function Hero() {
         <p className="hero__p">
           Porque não basta resolver apenas os conflitos do mundo do direito.
         </p>
-        <Button content="Inicie a sua jornada" />
+        <RegularButton content="Inicie a sua jornada" />
       </div>
       <span></span>
     </section>

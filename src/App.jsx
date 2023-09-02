@@ -1,10 +1,11 @@
-import Hero from './LandingPage/Hero/Hero';
-import './styles/App.sass';
+import CasesSection from './LandingPage/Cases/CasesSection';
+import HeroSection from './LandingPage/Hero/HeroSection';
 
 function App() {
   return (
-    <div className='page__container'>
-      <Hero />
+    <div>
+      <HeroSection />
+      <CasesSection />
     </div>
   );
 }
