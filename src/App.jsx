@@ -1,12 +1,8 @@
-import CasesSection from './LandingPage/Cases/CasesSection';
-import HeroSection from './LandingPage/Hero/HeroSection';
+import Container from './LandingPage/Container';
 
 function App() {
   return (
-    <div>
-      <HeroSection />
-      <CasesSection />
-    </div>
+    <Container />
   );
 }
 
