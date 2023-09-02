@@ -1,6 +1,7 @@
 .section--container
-  padding-inline: 30px 
   margin-block: 80px
+  display: flex
+  flex-wrap: wrap
   
 .section--title
   font-size: 2rem
@@ -8,9 +9,11 @@
   letter-spacing: -0.48px
 
 .article--container
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
   margin-bottom: 32px
-  &:first-of-type
-    margin-top: 80px
   &:last-of-type
     margin-bottom: 0
 
@@ -18,4 +21,17 @@
   font-size: 1.5rem
   line-height: 2.5rem
   letter-spacing: -0.36px
-  margin-bottom: 16px
+
+@media (min-width: 768px)
+
+  .section--title
+    width: 440px
+
+  .article--container
+    width: 50%
+    margin-bottom: 80px
+    &:first-of-type
+      margin-top: 0
+    &:nth-of-type(even)
+      padding-left: 32px
+      

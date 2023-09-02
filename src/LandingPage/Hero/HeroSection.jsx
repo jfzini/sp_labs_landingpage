@@ -5,7 +5,7 @@ import '../../styles/Hero.sass';
 
 export default function HeroSection() {
   return (
-    <section className="hero--container">
+    <section className="hero--container page-padding">
       <Header />
       <div className="hero--content">
         <h1 className="hero--title">
