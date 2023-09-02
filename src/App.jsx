@@ -1,5 +1,5 @@
 import Hero from './LandingPage/Hero/Hero';
-import './App.sass';
+import './styles/App.sass';
 
 function App() {
   return (

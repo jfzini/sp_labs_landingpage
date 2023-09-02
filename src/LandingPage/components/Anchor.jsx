@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../index.sass';
 
 export default function Anchor({name}) {
   return (
