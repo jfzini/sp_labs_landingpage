@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 import '../../../styles/Form.sass';
 import { api } from '../../../services';
 import { InputField, RegularButton, TextArea, SelectField, CheckboxField } from '../components';
 
 export default function ContactForm() {
-  const { register, handleSubmit, reset, getValues, formState } = useForm({
+  const { register, handleSubmit, reset, formState } = useForm({
     mode: 'onSubmit',
     defaultValues: {
       name: '',

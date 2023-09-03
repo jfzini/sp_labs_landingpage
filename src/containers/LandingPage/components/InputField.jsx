@@ -1,7 +1,16 @@
 import PropTypes from 'prop-types';
 import '../../../styles/Form.sass';
 
-export default function InputField({ name, type, placeholder, register, label, required, id, errors }) {
+export default function InputField({
+  name,
+  type,
+  placeholder,
+  register,
+  label,
+  required,
+  id,
+  errors,
+}) {
   return (
     <div className="form__input--container contact__form--field">
       <input
@@ -33,4 +42,5 @@ InputField.propTypes = {
   register: PropTypes.func.isRequired,
   required: PropTypes.bool,
   type: PropTypes.string.isRequired,
+  errors: PropTypes.object.isRequired,
 };

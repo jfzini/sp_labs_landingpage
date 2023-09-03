@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import Case from './Case';
 import { api } from '../../../services';
 import '../../../styles/Section.sass';

@@ -27,4 +27,5 @@ CheckboxField.propTypes = {
   name: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,
   required: PropTypes.bool,
+  errors: PropTypes.object.isRequired,
 };
