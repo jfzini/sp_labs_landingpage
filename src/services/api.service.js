@@ -9,4 +9,10 @@ const submitForm = async (data) => {
   const response = await axios.post('https://sp-labs.vercel.app/api/contact', {
     ...data,
   });
+  return response;
+};
+
+export default {
+  fetchCases,
+  submitForm,
 };

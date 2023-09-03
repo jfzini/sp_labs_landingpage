@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import '../../../styles/Form.sass';
+import { api } from '../../../services';
 import InputField from '../components/InputField';
 import RegularButton from '../components/RegularButton';
 import TextArea from '../components/TextArea';
@@ -23,11 +24,8 @@ export default function ContactForm() {
   const { isSubmitSuccessful, errors } = formState;
 
   const submitForm = async (data) => {
-    const response = await axios.post('https://sp-labs.vercel.app/api/contact', {
-      ...data,
-    });
+    await api.submitForm(data);
     reset();
-    return;
   };
 
   const options = [
