@@ -1,10 +1,13 @@
 import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
 import '../../../styles/Form.sass';
 import { api } from '../../../services';
 import { InputField, RegularButton, TextArea, SelectField, CheckboxField } from '../components';
+import { openModal, closeModal } from '../../../redux/actions';
 
 export default function ContactForm() {
-  const { register, handleSubmit, reset, formState } = useForm({
+  const dispatch = useDispatch();
+  const { register, handleSubmit, reset, getValues, formState } = useForm({
     mode: 'onSubmit',
     defaultValues: {
       name: '',
@@ -19,6 +22,8 @@ export default function ContactForm() {
 
   const submitForm = async (data) => {
     await api.submitForm(data);
+    const name = getValues('name');
+    dispatch(openModal(name));
     reset();
   };
 
