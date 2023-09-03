@@ -1,5 +1,5 @@
-import RegularButton from '../components/RegularButton';
 import Header from './Header';
+import { RegularButton } from '../components';
 import '../../../styles/Hero.sass';
 
 export default function HeroSection() {

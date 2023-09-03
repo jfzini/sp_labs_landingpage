@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import SmallButton from '../components/SmallButton';
+import { SmallButton } from '../components';
 
 export default function Case({ title, description, link }) {
   return (

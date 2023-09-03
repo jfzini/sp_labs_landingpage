@@ -1,5 +1,5 @@
 import logoWhite from '../../../assets/sp-labs-white.svg';
-import Anchor from '../components/Anchor';
+import { Anchor } from '../components';
 
 export default function Header() {
   const navAnchors = ['Cases', 'Contato'];

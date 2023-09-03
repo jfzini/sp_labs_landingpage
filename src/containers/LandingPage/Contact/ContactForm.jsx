@@ -3,11 +3,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import '../../../styles/Form.sass';
 import { api } from '../../../services';
-import InputField from '../components/InputField';
-import RegularButton from '../components/RegularButton';
-import TextArea from '../components/TextArea';
-import SelectField from '../components/SelectField';
-import CheckboxField from '../components/CheckboxField';
+import { InputField, RegularButton, TextArea, SelectField, CheckboxField } from '../components';
 
 export default function ContactForm() {
   const { register, handleSubmit, reset, getValues, formState } = useForm({
