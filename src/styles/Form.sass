@@ -1,73 +1,8 @@
 @import variables
-  
-.input--container
-  width: 100%
-  position: relative
 
-.label
-  position: absolute
-  left: 10px
-  top: 14px
-  transition: all 0.2s ease-in-out
-  padding: 0 2px
-  z-index: 1
-  color: $zinc-800
-  font-size: 1rem
-  &::before
-    content: ''
-    height: 5px
-    background-color: white
-    position: absolute
-    left: -2px
-    top: 10px
-    width: calc(100% + 4px)
-    z-index: -1
+.contact__bg
+  background: $radial-bg-small-screen
 
-.input
-  padding: 12px 16px
-  width: 100%
-  height: 100%
-  background: rgba(255, 255, 255, 0.25)
-  border: 1px solid $zinc-300
-  border-radius: 4px
-  font-size: 1rem
-  outline: none
-  transition: all 0.3s ease-out
-  color: $zinc-800
-  &::placeholder
-    font-size: 1rem
-    opacity: 0
-    transition: all 0.3s ease-out
-  &:hover
-    border: 1px solid $zinc-400
-    cursor: pointer
-  &:focus
-    border: 1px solid $teal-500
-    & + .label
-      top: -10px
-      font-size: 0.925rem
-      color: $teal-500
-      font-weight: 500
-    &::placeholder
-      opacity: 1
-
-.input:focus,
-input:not(:placeholder-shown).input
-  & + .label
-    top: -10px
-    font-size: 0.925rem
-    color: $teal-500
-    font-weight: 500
-  // I thought this could be nice to indicate an invalid input, but the way it works may not be very UX friendly
-  // &:invalid
-  //   & + .label
-  //     top: -10px
-  //     font-size: 0.925rem
-  //     color: $red-500
-  //     font-weight: 500
-  //   &::placeholder
-  //     opacity: 1
-    
 .contact__form
   display: flex
   padding: 32px
@@ -81,3 +16,145 @@ input:not(:placeholder-shown).input
 
 .contact__form--field
   margin-bottom: 16px
+
+.form__input--container
+  width: 100%
+  position: relative
+  display: flex
+
+.form__label
+  position: absolute
+  left: 16px
+  top: 14px
+  transition: all 0.2s ease-in-out
+  padding: 0 2px
+  z-index: 1
+  color: $zinc-800
+  font-size: 1rem
+  &:hover
+    cursor: auto
+  &::before
+    content: ''
+    height: 5px
+    background-color: white
+    position: absolute
+    left: -2px
+    top: 10px
+    width: calc(100% + 4px)
+    z-index: -1
+
+.form__input,
+.form__select,
+.form__textarea
+  padding: 12px 16px
+  width: 100%
+  height: 100%
+  background: rgba(255, 255, 255, 0.25)
+  border: 1px solid $zinc-300
+  border-radius: 4px
+  font-size: 1rem
+  outline: none
+  transition: all 0.3s ease-out
+  color: $zinc-800
+
+.form__input
+  &::placeholder
+    font-size: 1rem
+    opacity: 0
+    transition: all 0.3s ease-out
+  &:hover
+    border: 1px solid $zinc-400
+    cursor: auto
+  &:focus
+    border: 1px solid $teal-500
+    & + .form__label
+      top: -10px
+      font-size: 0.925rem
+      color: $teal-500
+      font-weight: 500
+    &::placeholder
+      opacity: 1
+
+.form__input:focus,
+input:not(:placeholder-shown).form__input
+  & + .form__label
+    top: -10px
+    font-size: 0.925rem
+    color: $teal-500
+    font-weight: 500
+  // I thought this could be nice to indicate an invalid input, but the way it works may not be very UX friendly
+  // &:invalid
+  //   & + .label
+  //     top: -10px
+  //     font-size: 0.925rem
+  //     color: $red-500
+  //     font-weight: 500
+  //   &::placeholder
+  //     opacity: 1
+
+.form__select
+  appearance: none
+  &:hover
+    border: 1px solid $zinc-400
+    cursor: pointer
+  &:active
+    border: 1px solid $teal-500
+
+.form__select--arrow
+  position: absolute
+  right: 16px
+  top: 50%
+  transform: translateY(-50%)
+  transition: all 0.3s linear
+  pointer-events: none
+  .form__select:active + &
+    transform: translateY(-50%) rotate(-180deg)
+    color: $teal-500
+
+.form__textarea
+  height: 174px
+  resize: none
+  &:hover
+    border: 1px solid $zinc-400
+    cursor: auto
+  &:focus
+    border: 1px solid $teal-500
+
+.form__checkbox
+  visibility: hidden
+  &:after
+    background-color: $zinc-300
+    border: 1px solid $zinc-400
+    border-radius: 4px
+    content: ''
+    display: inline-block
+    height: 18px
+    left: 0
+    position: relative
+    top: 0
+    visibility: visible
+    width: 18px
+  &:checked:after
+    width: 20px
+    height: 20px
+    border: none
+    content: url(../assets/checked.svg)
+    display: inline-block
+    left: 0
+    position: relative
+    top: 0
+    visibility: visible
+
+.form__checkbox--declaration
+  font-size: 0.875rem
+  padding-left: 36px
+  font-weight: 400
+  line-height: 150%
+
+@media (min-width: 768px)
+
+  .contact__bg
+    background: $radial-bg-big-screen
+
+  .contact__form
+    width: 420px

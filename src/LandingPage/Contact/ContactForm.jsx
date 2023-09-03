@@ -3,69 +3,87 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import '../../styles/Form.sass';
 import InputField from '../components/InputField';
+import RegularButton from '../components/RegularButton';
+import chevronDown from '../../assets/chevron-down.svg';
+import TextArea from '../components/TextArea';
+import SelectField from '../components/SelectField';
+import CheckboxField from '../components/CheckboxField';
 
 export default function ContactForm() {
-  const { register, handleSubmit, formState } = useForm({
+  const { register, handleSubmit, reset, formState } = useForm({
     mode: 'all', // selected 'all' in this case since its a simple form, but can change to other modes if performance is an issue
+    defaultValues: {
+      name: '',
+      email: '',
+      segment: 'no-segment',
+      message: '',
+      terms: false,
+    },
   });
 
   const { isSubmitting, isSubmitSuccessful } = formState;
 
   const submitForm = async (data) => {
-    // const response = await axios.post('https://sp-labs.vercel.app/api/contact', {
-    //   ...data,
-    // });
-    console.log(data);
+    const response = await axios.post('https://sp-labs.vercel.app/api/contact', {
+      ...data,
+    });
+    reset();
+    console.log(response);
   };
 
+  const options = [
+    {
+      value: 'no-segment',
+      label: 'Seu segmento',
+    },
+    {
+      value: 'segment1',
+      label: 'Segmento 1',
+    },
+    {
+      value: 'segment2',
+      label: 'Segmento 2',
+    },
+  ];
+
   return (
-    <form onSubmit={handleSubmit(submitForm)} className='contact__form'>
+    <form onSubmit={handleSubmit(submitForm)} className="contact__form">
       <InputField
         name="name"
         type="text"
-        placeholder="Seu nome"
+        placeholder="Insira seu nome"
         register={register}
-        label="Nome"
+        label="Seu nome"
         required
         id="name-input"
       />
       <InputField
         name="email"
         type="email"
-        placeholder="Seu email"
+        placeholder="Ex: email@email.com"
         register={register}
-        label="E-mail"
+        label="Seu e-mail"
         id="email-input"
       />
-      <div className="input--container contact__form--field">
-        <select {...register('segment')}>
-          <option value="no-segment">Seu segmento</option>
-          <option value="segment1">Segmento 1</option>
-          <option value="segment2">Segmento 2</option>
-        </select>
-      </div>
-      <div className="input--container contact__form--field">
-        <textarea
-          {...register('message')}
-          placeholder="Fale um pouco sobre o seu negócio"
-        ></textarea>
-      </div>
-      <div className="input--container contact__form--field">
-        <input
-          {...register('terms')}
-          type="checkbox"
-          id="terms-checkbox"
-          className="input"
-          required
-        />
-        <label htmlFor="terms-checkbox" className="">
-          Declaro que conheço a Política de Privacidade e autorizo a utilização das minhas
-          informações pelo SP Labs
-        </label>
-      </div>
-      <button type="submit" className='button button--regular w100'>
-        {isSubmitting ? 'Enviando' : isSubmitSuccessful ? 'Enviado' : 'Enviar'}
-      </button>
+      <SelectField register={register} options={options} name="segment" />
+      <TextArea
+        register={register}
+        placeholder="Fale um pouco sobre o seu negócio"
+        name="message"
+        id="message-textarea"
+      />
+      <CheckboxField
+        register={register}
+        name="terms"
+        id="terms-checkbox"
+        required
+        label="Declaro que conheço a Política de Privacidade e autorizo a utilização das minhas informações pelo SP Labs"
+      />
+      <RegularButton
+        content={isSubmitting ? 'Enviando' : isSubmitSuccessful ? 'Enviado' : 'Enviar'}
+        aditionalClass="w100"
+        type="submit"
+      />
     </form>
   );
 }
