@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import chevronDown from '../../assets/chevron-down.svg';
 
 export default function SelectField({ register, options, name }) {
@@ -15,3 +15,9 @@ export default function SelectField({ register, options, name }) {
     </div>
   );
 }
+
+SelectField.propTypes = {
+  name: PropTypes.string,
+  options: PropTypes.array,
+  register: PropTypes.func,
+};

@@ -1,4 +1,3 @@
-import React from 'react';
 import logoWhite from '../../assets/sp-labs-white.svg';
 import Anchor from '../components/Anchor';
 

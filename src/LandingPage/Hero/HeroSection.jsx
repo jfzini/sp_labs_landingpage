@@ -1,4 +1,3 @@
-import React from 'react';
 import RegularButton from '../components/RegularButton';
 import Header from './Header';
 import '../../styles/Hero.sass';

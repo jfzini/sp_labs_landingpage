@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import '../../styles/Form.sass';
 
 export default function InputField({ name, type, placeholder, register, label, required, id }) {
@@ -18,3 +18,13 @@ export default function InputField({ name, type, placeholder, register, label, r
     </div>
   );
 }
+
+InputField.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  register: PropTypes.func.isRequired,
+  required: PropTypes.bool,
+  type: PropTypes.string.isRequired,
+};

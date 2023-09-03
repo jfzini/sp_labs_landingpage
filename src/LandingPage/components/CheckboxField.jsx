@@ -1,5 +1,4 @@
-import React from 'react';
-
+import PropTypes from 'prop-types';
 export default function CheckboxField({ register, name, id, required, label }) {
   return (
     <div className="form__input--container contact__form--field">
@@ -16,3 +15,11 @@ export default function CheckboxField({ register, name, id, required, label }) {
     </div>
   );
 }
+
+CheckboxField.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  register: PropTypes.func.isRequired,
+  required: PropTypes.bool,
+};

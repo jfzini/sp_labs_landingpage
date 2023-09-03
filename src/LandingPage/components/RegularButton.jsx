@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import '../../styles/Button.sass';
 
 export default function RegularButton({ content, aditionalClass, type }) {
@@ -11,3 +11,9 @@ export default function RegularButton({ content, aditionalClass, type }) {
     </button>
   );
 }
+
+RegularButton.propTypes = {
+  aditionalClass: PropTypes.string,
+  content: PropTypes.string.isRequired,
+  type: PropTypes.string,
+};

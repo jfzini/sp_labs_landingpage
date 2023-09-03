@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../styles/Video.sass';
 
 export default function VideoSection() {
@@ -15,7 +14,7 @@ export default function VideoSection() {
         height="315"
         src="https://www.youtube.com/embed/e3FXt-wABIE?si=W6ejlF3b3UX6KKKk"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
         className="video--container"

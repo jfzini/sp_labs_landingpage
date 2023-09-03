@@ -1,10 +1,8 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import '../../styles/Form.sass';
 import InputField from '../components/InputField';
 import RegularButton from '../components/RegularButton';
-import chevronDown from '../../assets/chevron-down.svg';
 import TextArea from '../components/TextArea';
 import SelectField from '../components/SelectField';
 import CheckboxField from '../components/CheckboxField';
