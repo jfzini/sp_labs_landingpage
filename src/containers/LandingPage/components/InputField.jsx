@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
-import '../../styles/Form.sass';
+import '../../../styles/Form.sass';
 
-export default function InputField({ name, type, placeholder, register, label, required, id }) {
+export default function InputField({ name, type, placeholder, register, label, required, id, errors }) {
   return (
     <div className="form__input--container contact__form--field">
       <input
-        {...register(name)}
+        {...register(name, {
+          required: {
+            value: required ? true : false,
+            message: `${label} é obrigatório`,
+          },
+        })}
         type={type}
         placeholder={placeholder}
         className="form__input"
@@ -15,6 +20,7 @@ export default function InputField({ name, type, placeholder, register, label, r
       <label htmlFor={id} className="form__label">
         {label}
       </label>
+      <p className="form__error-message">{errors[name]?.message}</p>
     </div>
   );
 }

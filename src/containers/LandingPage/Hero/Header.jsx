@@ -1,4 +1,4 @@
-import logoWhite from '../../assets/sp-labs-white.svg';
+import logoWhite from '../../../assets/sp-labs-white.svg';
 import Anchor from '../components/Anchor';
 
 export default function Header() {

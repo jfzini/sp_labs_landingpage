@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Case from './Case';
-import '../../styles/Section.sass';
+import '../../../styles/Section.sass';
 
 export default function CasesSection() {
   const [cases, setCases] = useState([]);

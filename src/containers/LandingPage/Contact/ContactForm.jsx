@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import '../../styles/Form.sass';
+import '../../../styles/Form.sass';
 import InputField from '../components/InputField';
 import RegularButton from '../components/RegularButton';
 import TextArea from '../components/TextArea';
@@ -8,8 +9,8 @@ import SelectField from '../components/SelectField';
 import CheckboxField from '../components/CheckboxField';
 
 export default function ContactForm() {
-  const { register, handleSubmit, reset, formState } = useForm({
-    mode: 'all', // selected 'all' in this case since its a simple form, but can change to other modes if performance is an issue
+  const { register, handleSubmit, reset, getValues, formState } = useForm({
+    mode: 'onSubmit',
     defaultValues: {
       name: '',
       email: '',
@@ -19,14 +20,14 @@ export default function ContactForm() {
     },
   });
 
-  const { isSubmitting, isSubmitSuccessful } = formState;
+  const { isSubmitSuccessful, errors } = formState;
 
   const submitForm = async (data) => {
     const response = await axios.post('https://sp-labs.vercel.app/api/contact', {
       ...data,
     });
     reset();
-    console.log(response);
+    return;
   };
 
   const options = [
@@ -54,6 +55,7 @@ export default function ContactForm() {
         label="Seu nome"
         required
         id="name-input"
+        errors={errors}
       />
       <InputField
         name="email"
@@ -62,6 +64,7 @@ export default function ContactForm() {
         register={register}
         label="Seu e-mail"
         id="email-input"
+        errors={errors}
       />
       <SelectField register={register} options={options} name="segment" />
       <TextArea
@@ -74,11 +77,12 @@ export default function ContactForm() {
         register={register}
         name="terms"
         id="terms-checkbox"
-        required
         label="Declaro que conheço a Política de Privacidade e autorizo a utilização das minhas informações pelo SP Labs"
+        errors={errors}
+        required
       />
       <RegularButton
-        content={isSubmitting ? 'Enviando' : isSubmitSuccessful ? 'Enviado' : 'Enviar'}
+        content={isSubmitSuccessful ? 'Enviado' : 'Enviar'}
         aditionalClass="w100"
         type="submit"
       />

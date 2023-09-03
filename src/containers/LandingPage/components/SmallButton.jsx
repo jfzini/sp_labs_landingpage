@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import arrowRightSvg from '../../assets/arrow-right.svg';
+import arrowRightSvg from '../../../assets/arrow-right.svg';
 
 export default function SmallButton({ link, content }) {
   return (

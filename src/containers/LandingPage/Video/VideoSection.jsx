@@ -1,4 +1,4 @@
-import '../../styles/Video.sass';
+import '../../../styles/Video.sass';
 
 export default function VideoSection() {
   return (
@@ -15,8 +15,7 @@ export default function VideoSection() {
         src="https://www.youtube.com/embed/e3FXt-wABIE?si=W6ejlF3b3UX6KKKk"
         title="YouTube video player"
         frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
         className="video--container"
       ></iframe>
     </section>

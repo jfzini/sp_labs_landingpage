@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import chevronDown from '../../assets/chevron-down.svg';
+import chevronDown from '../../../assets/chevron-down.svg';
 
 export default function SelectField({ register, options, name }) {
   return (

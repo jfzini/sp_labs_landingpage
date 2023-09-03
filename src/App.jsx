@@ -1,4 +1,4 @@
-import Container from './LandingPage/Container';
+import Container from './containers/LandingPage/Container';
 
 function App() {
   return (

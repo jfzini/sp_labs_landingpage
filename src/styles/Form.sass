@@ -21,6 +21,8 @@
   width: 100%
   position: relative
   display: flex
+  flex-direction: column
+  justify-content: flex-start
 
 .form__label
   position: absolute
@@ -122,6 +124,7 @@ input:not(:placeholder-shown).form__input
 
 .form__checkbox
   visibility: hidden
+  position: absolute
   &:after
     background-color: $zinc-300
     border: 1px solid $zinc-400
@@ -150,6 +153,12 @@ input:not(:placeholder-shown).form__input
   padding-left: 36px
   font-weight: 400
   line-height: 150%
+
+.form__error-message
+  color: $red-500
+  font-size: 0.75rem
+  font-weight: 400
+  margin: 4px 0 0 10px
 
 @media (min-width: 768px)
 
