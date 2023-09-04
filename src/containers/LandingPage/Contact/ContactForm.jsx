@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import '../../../styles/Form.sass';
 import { api } from '../../../services';
 import { InputField, RegularButton, TextArea, SelectField, CheckboxField } from '../components';
-import { openModal, closeModal } from '../../../redux/actions';
+import { openModal } from '../../../redux/actions';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
