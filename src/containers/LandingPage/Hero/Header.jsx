@@ -6,12 +6,12 @@ export default function Header() {
   return (
     <header className="header--container">
       <a href="#">
-        <img src={logoWhite} alt="SP Labs Logo" className="header__img--logo" />
+        <img src={logoWhite} alt="SP Labs Logo" className="img--logo" />
       </a>
       <nav>
-        <ul className="nav__ul">
+        <ul className="header__ul">
           {navAnchors.map((anchor) => (
-            <Anchor key={anchor} name={anchor} />
+            <Anchor key={anchor} name={anchor} parent='header' extraClass='semi-bold'/>
           ))}
         </ul>
       </nav>

@@ -1,4 +1,5 @@
 @import variables
+@import animations
 
 .hero--container
   display: flex
@@ -30,23 +31,33 @@
 .header__anchors
   display: flex
 
-.nav__ul
+.header__ul
   display: flex
-  .nav__li
-    list-style: none
-    margin-right: 32px
-    &:last-of-type
-      margin-right: 0
-    .nav__anchor
-      color: $white
-      font-size: 1rem
-      border-bottom: 1px solid transparent
-      transition: all 0.3s ease-in-out
-      cursor: default
-      &:hover
-        border-bottom: 1px solid $white
 
-.header__img--logo
+.header__li
+  list-style: none
+  margin-right: 32px
+  &:last-of-type
+    margin-right: 0
+
+.header__anchor
+  color: $white
+  font-size: 1rem
+  border-bottom: 1px solid transparent
+  transition: all 0.3s ease-in-out
+  cursor: default
+  position: relative
+  &:hover::after
+    content: ''
+    position: absolute
+    display: block
+    width: 100%
+    bottom: 1px
+    height: 1px
+    background: $white
+    animation: appear 0.3s linear
+
+.img--logo
   height: 46px
 
 .hero--content

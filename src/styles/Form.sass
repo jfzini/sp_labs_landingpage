@@ -38,7 +38,7 @@
   &::before
     content: ''
     height: 5px
-    background-color: white
+    background-color: $white
     position: absolute
     left: -2px
     top: 10px
@@ -69,11 +69,11 @@
     cursor: auto
   &:focus
     border: 1px solid $teal-500
-    & + .form__label
-      top: -10px
-      font-size: 0.925rem
-      color: $teal-500
-      font-weight: 500
+    // & + .form__label
+    //   top: -10px
+    //   font-size: 0.925rem
+    //   color: $teal-500
+    //   font-weight: 500
     &::placeholder
       opacity: 1
 
@@ -83,16 +83,7 @@ input:not(:placeholder-shown).form__input
     top: -10px
     font-size: 0.925rem
     color: $teal-500
-    font-weight: 500
-  // I thought this could be nice to indicate an invalid input, but the way it works may not be very UX friendly
-  // &:invalid
-  //   & + .label
-  //     top: -10px
-  //     font-size: 0.925rem
-  //     color: $red-500
-  //     font-weight: 500
-  //   &::placeholder
-  //     opacity: 1
+    font-weight: 400
 
 .form__select
   appearance: none
