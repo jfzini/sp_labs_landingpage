@@ -1,0 +1,48 @@
+@import variables
+@import animations
+  
+.chat__button--toggle
+  border: none
+  height: 48px
+  width: 48px
+  border-radius: 50%
+  background-color: $zinc-800
+  position: fixed
+  right: 32px
+  bottom: 32px
+  cursor: pointer
+  transition: all 0.3s linear
+  &:hover
+    background-color: $teal-300
+    & > svg
+      & > path
+        transition: all 0.3s linear
+        stroke: $zinc-800
+
+.chat__button--toggle__svg
+  display: block
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.chat--container
+  background: $white
+  border: 1px solid $zinc-800
+  border-radius: 32px
+  position: fixed
+  bottom: 96px
+  right: 32px
+  display: flex
+  width: 386px
+  height: 409px
+  padding: 32px 16px 16px 16px
+  flex-direction: column
+  align-items: flex-start
+  gap: 16px
+  flex-shrink: 0
+  opacity: 0
+  animation: appear 0.3s linear forwards
+
+.chat--container--closing
+  animation: disappear 0.3s linear forwards

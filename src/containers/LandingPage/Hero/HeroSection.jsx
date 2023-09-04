@@ -1,8 +1,11 @@
 import Header from './Header';
 import { RegularButton } from '../components';
+import { useDispatch } from 'react-redux';
+import { openChat } from '../../../redux/actions';
 import '../../../styles/Hero.sass';
 
 export default function HeroSection() {
+  const dispatch = useDispatch();
   return (
     <section className="hero--container page-padding">
       <Header />
@@ -13,7 +16,7 @@ export default function HeroSection() {
         <p className="paragraph bold">
           Porque não basta resolver apenas os conflitos do mundo do direito.
         </p>
-        <RegularButton content="Inicie a sua jornada" />
+        <RegularButton content="Inicie a sua jornada" onClick={() => dispatch(openChat())} />
       </div>
       <span></span>
     </section>

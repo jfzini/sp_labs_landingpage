@@ -1,8 +1,12 @@
-import Container from './containers/LandingPage/Container';
+import ChatContainer from './containers/Chat/Container';
+import LandingPageContainer from './containers/LandingPage/Container';
 
 function App() {
   return (
-    <Container />
+    <>
+      <LandingPageContainer />
+      <ChatContainer />
+    </>
   );
 }
 
