@@ -43,6 +43,54 @@
   flex-shrink: 0
   opacity: 0
   animation: appear 0.3s linear forwards
+  transition: all 0.3s linear
 
 .chat--container--closing
   animation: disappear 0.3s linear forwards
+
+.chat__header
+  display: flex
+  flex-direction: column
+  gap: 16px
+  padding-inline: 16px
+  width: 100%
+  margin-bottom: 16px
+  border-bottom: 1px solid $zinc-800
+
+.chat__header--toggle
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.chat__avatar--large
+  width: 40px
+  height: 40px
+  background: $zinc-800
+  border-radius: 50%
+  position: relative
+  & > img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.chat__header--toggle__button
+  display: flex
+  border: 1px solid $zinc-200
+  border-radius: 8px
+  padding: 4px 8px
+  background: $white
+  gap: 8px
+  align-items: center
+  color: $zinc-800
+  cursor: pointer
+
+.chat__header--salutation
+  font-family: 'Inter'
+  font-size: 20px
+  font-style: normal
+  font-weight: 400
+  line-height: 320%
+
+.chat--container--large
+  height: 700px
