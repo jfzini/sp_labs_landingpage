@@ -45,6 +45,7 @@
   right: 32px
   transition: all 0.3s linear
   width: 386px
+  z-index: 100
 
 .chat--container--closing
   animation: disappear 0.3s linear forwards
@@ -143,6 +144,7 @@
   display: flex
   flex-direction: column-reverse
   height: 100%
+  width: 100%
   overflow-y: auto
 
 .chat__viewport
@@ -195,10 +197,10 @@
     gap: 4px
 
 .chat__history--placeholder-small
-  height: 169px
+  height: 150px
 
 .chat__history--placeholder-large
-  height: 460px
+  height: 440px
 
 @media (max-width: 768px)
   .chat--container
