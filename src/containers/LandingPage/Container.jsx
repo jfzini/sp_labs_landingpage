@@ -20,7 +20,7 @@ export default function LandingPageContainer() {
   };
 
   return (
-    <div onClick={() => dispatch(handleChat())}>
+    <div onClick={() => handleChat()}>
       <HeroSection />
       <CasesSection />
       <VideoSection />

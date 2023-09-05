@@ -3,36 +3,39 @@
   flex-wrap: wrap
   justify-content: space-between
   padding-block: 80px
-  
+
 .section--title
   font-size: 2rem
-  letter-spacing: -0.48px
+  letter-spacing: -.48px
   line-height: 4rem
 
 .article--container
-  align-items: flex-start
   display: flex
   flex-direction: column
+  align-items: flex-start
   margin-bottom: 32px
+
   &:last-of-type
     margin-bottom: 0
 
 .article--title
   font-size: 1.5rem
-  letter-spacing: -0.36px
+  letter-spacing: -.36px
   line-height: 2.5rem
 
 @media (min-width: 768px)
 
   .section--title
-    font-size: 2.25rem
     width: 500px
+    font-size: 2.25rem
 
   .article--container
-    margin-bottom: 80px
     width: 50%
+    margin-bottom: 80px
+
     &:first-of-type
       margin-top: 0
+
     &:nth-of-type(even)
       padding-left: 32px
       

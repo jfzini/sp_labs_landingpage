@@ -1,30 +1,32 @@
 @import variables
 @import animations
 
+
 .hero--container
-  align-items: center
   display: flex
-  flex-direction: column
-  height: 100vh
-  justify-content: space-between
-  padding-block: 42px
   position: relative
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  height: 100vh
+  padding-block: 42px
+
   ::before
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
     background: linear-gradient($zinc-seethrough, $zinc-seethrough), url('../assets/bg-picture.png')
     background-position: center
     background-size: cover
-    content: ""
-    filter: blur(0.8px) grayscale(100%)
-    height: 100%
-    left: 0
-    position: absolute
-    top: 0
-    width: 100%
+    content: ''
     z-index: -1
+    filter: blur(.8px) grayscale(100%)
 
 .header--container
-  align-items: center
   display: flex
+  align-items: center
   justify-content: space-between
   width: 100%
 
@@ -35,52 +37,55 @@
   display: flex
 
 .header__li
-  list-style: none
   margin-right: 32px
+  list-style: none
+
   &:last-of-type
     margin-right: 0
 
 .header__anchor
+  position: relative
+  transition: .3s ease-in-out
   border-bottom: 1px solid transparent
   color: $white
-  cursor: default
   font-size: 1rem
-  position: relative
-  transition: all 0.3s ease-in-out
+  cursor: default
+
   &:hover::after
-    animation: appear 0.3s linear
-    background: $white
-    bottom: 1px
-    content: ''
     display: block
-    height: 1px
     position: absolute
+    bottom: 1px
     width: 100%
+    height: 1px
+    background: $white
+    content: ''
+    animation: appear .3s linear
 
 .header__anchor__fade::after
-  animation: disappear 0.3s linear forwards
-  background: $white
-  bottom: 1px
-  content: ''
   display: block
-  height: 1px
   position: absolute
+  bottom: 1px
   width: 100%
+  height: 1px
+  background: $white
+  content: ''
+  animation: disappear .3s linear forwards
 
 .img--logo
   height: 46px
 
 .hero--content
   align-self: flex-start
-  color: $white
   width: 330px
+  color: $white
 
 .hero--title
   font-size: 3.5rem
   font-weight: 700
-  letter-spacing: -0.44px
+  letter-spacing: -.44px
   line-height: 4.5rem
   text-align: left
+
   .bodoni
     font-size: 3.5rem * 1.05 // This is needed because the font is a bit smaller than the Roboto font. https://www.semprocesso.com.br/brand/tipografia
     letter-spacing: -1.095px
@@ -93,6 +98,7 @@
 
   .hero--title
     font-size: 4rem
-    letter-spacing: -0.96px
+    letter-spacing: -.96px
+
     .bodoni
       font-size: 4rem * 1.05 // This is needed because the font is a bit smaller than the Roboto font. https://www.semprocesso.com.br/brand/tipografia

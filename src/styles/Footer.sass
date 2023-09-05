@@ -1,89 +1,91 @@
 @import variables
 @import animations
 
+
 .footer--container
   border-top: 1px solid #e2e2e2
 
 .footer--content
-  align-items: center
   display: flex
   flex-direction: column
+  align-items: center
 
 .footer__nav
-  align-items: center
   display: flex
   flex-direction: column
-  gap: 32px
-  margin-top: 64px
+  align-items: center
   width: 100%
+  margin-top: 64px
+  gap: 32px
 
 .footer__ul
-  align-items: center
   display: flex
   flex-direction: column
+  align-items: center
 
 .footer__subtitle
+  margin-bottom: 16px
   font-size: 1rem
   font-weight: 700
-  letter-spacing: 0.24px
+  letter-spacing: .24px
   line-height: 150%
-  margin-bottom: 16px
 
 .footer__li
   color: $zinc-800
   font-size: 1rem
-  letter-spacing: -0.24px
+  letter-spacing: -.24px
   line-height: 150%
   list-style: none
 
 .footer__anchor
+  position: relative
   color: $zinc-800
   cursor: default
-  position: relative
+
   &:hover::after
-    animation: appear 0.3s linear
-    background: $zinc-600
-    bottom: 1px
-    content: ''
     display: block
-    height: 1px
     position: absolute
+    bottom: 1px
     width: 100%
+    height: 1px
+    background: $zinc-600
+    content: ''
+    animation: appear .3s linear
 
 .footer__anchor__fade::after
-  animation: disappear 0.3s linear forwards
-  background: $zinc-600
-  bottom: 1px
-  content: ''
   display: block
-  height: 1px
   position: absolute
+  bottom: 1px
   width: 100%
+  height: 1px
+  background: $zinc-600
+  content: ''
+  animation: disappear .3s linear forwards
 
 .footer__hr
-  background: $teal-300
-  border: 0
-  height: 2px
-  margin-block: 62px
   width: 100%
-  
+  height: 2px
+  border: 0
+  background: $teal-300
+  margin-block: 62px
+
 .footer--cr
   font-family: 'Montserrat'
   font-size: 15px
-  letter-spacing: -0.225px
+  letter-spacing: -.225px
   line-height: 160%
   text-align: center
 
 @media (min-width: 768px)
 
   .footer--content
-    align-items: flex-start
     flex-direction: row
+    align-items: flex-start
     justify-content: space-between
 
   .footer__nav
-    align-items: flex-start
     flex-direction: row
+    align-items: flex-start
     justify-content: flex-end
     margin: 0
 

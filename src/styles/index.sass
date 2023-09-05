@@ -7,14 +7,33 @@
   font-weight: normal
   src: url('../assets/fonts/Bodoni_/Woff/Bodoni-11-Book-Italic.woff') format('woff')
 
+
 html
   scroll-behavior: smooth
 
 *
-  box-sizing: border-box
-  font-family: 'Roboto', sans-serif
   margin: 0
   padding: 0
+  font-family: 'Roboto', sans-serif
+  box-sizing: border-box
+
+// scrollbar
+
+::-webkit-scrollbar
+  width: .9rem
+
+::-webkit-scrollbar-button
+  display: none
+
+::-webkit-scrollbar-track
+  background-color: $zinc-200
+
+::-webkit-scrollbar-thumb
+  border-radius: 50vw
+  background-color: $teal-500
+
+  &:active
+    background-color: $teal-600
 
 
 // utility classes
@@ -42,7 +61,7 @@ html
 .paragraph
   font-size: 1.125rem
   font-style: normal
-  letter-spacing: -0.27px
+  letter-spacing: -.27px
   line-height: 1.875rem
   margin-block: 16px
 

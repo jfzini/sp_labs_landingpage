@@ -1,91 +1,95 @@
 @import variables
 @import animations
-  
+
+
 .chat__button--toggle
-  background-color: $zinc-800
-  border: 0
-  border-radius: 50%
-  bottom: 32px
-  cursor: pointer
-  height: 48px
   position: fixed
   right: 32px
-  transition: all 0.3s linear
+  bottom: 32px
   width: 48px
+  height: 48px
+  transition: .3s linear
+  border: 0
+  border-radius: 50%
+  background-color: $zinc-800
+  cursor: pointer
+
   &:hover
     background-color: $teal-300
+
     & > svg
       & > path
+        transition: .3s linear
         stroke: $zinc-800
-        transition: all 0.3s linear
 
 .chat__button--toggle__svg
   display: block
-  left: 50%
   position: absolute
   top: 50%
+  left: 50%
   transform: translate(-50%, -50%)
 
 .chat--container
-  align-items: flex-start
-  animation: appear 0.3s linear forwards
-  background: $white
-  border: 1px solid $zinc-800
-  border-radius: 32px
-  bottom: 96px
   display: flex
-  flex-direction: column
-  flex-shrink: 0
-  gap: 16px
-  height: min(409px, calc(95vh - 96px))
-  justify-content: space-between
-  opacity: 0
-  padding: 32px 16px 16px 16px
   position: fixed
   right: 32px
-  transition: all 0.3s linear
+  bottom: 96px
+  flex-direction: column
+  flex-shrink: 0
+  align-items: flex-start
+  justify-content: space-between
   width: 386px
+  height: min(409px, calc(95vh - 96px))
+  padding: 32px 16px 16px
+  transition: .3s linear
+  border: 1px solid $zinc-800
+  border-radius: 32px
+  background: $white
+  opacity: 0
   z-index: 100
+  animation: appear .3s linear forwards
+  gap: 16px
 
 .chat--container--closing
-  animation: disappear 0.3s linear forwards
+  animation: disappear .3s linear forwards
 
 .chat__header
-  border-bottom: 1px solid $zinc-800
   display: flex
   flex-direction: column
-  gap: 16px
-  margin-bottom: 16px
-  padding-inline: 16px
   width: 100%
+  margin-bottom: 16px
+  border-bottom: 1px solid $zinc-800
+  gap: 16px
+  padding-inline: 16px
 
 .chat__header--toggle
-  align-items: center
   display: flex
+  align-items: center
   justify-content: space-between
 
 .chat__avatar--large
-  background: $zinc-800
-  border-radius: 50%
-  height: 40px
   position: relative
   width: 40px
+  height: 40px
+  border-radius: 50%
+  background: $zinc-800
+
   & > img
-    left: 50%
     position: absolute
     top: 50%
+    left: 50%
     transform: translate(-50%, -50%)
 
 .chat__header--toggle__button
+  display: flex
   align-items: center
-  background: $white
+  padding: 4px 8px
   border: 1px solid $zinc-200
   border-radius: 8px
+  background: $white
   color: $zinc-800
   cursor: pointer
-  display: flex
   gap: 8px
-  padding: 4px 8px
 
 .chat__header--salutation
   font-family: 'Inter'
@@ -99,101 +103,107 @@
 
 .chat__form
   display: flex
-  gap: 8px
   justify-content: space-between
   width: 100%
+  gap: 8px
 
 .chat__input
+  width: 100%
+  height: 40px
   border: 1px solid $zinc-400
   border-radius: 16px
   font-family: 'Inter'
-  font-size: 0.75rem
+  font-size: .75rem
   font-style: normal
   font-weight: 400
-  height: 40px
   padding-inline: 16px
-  width: 100%
+
   &::placeholder
     color: $black
+
   &:focus
     border: 1px solid $teal-500
     outline: none
 
 .chat__button
-  background: $teal-300
+  position: relative
+  min-width: 50px
+  height: 40px
   border: 0
   border-radius: 16px
-  height: 40px
-  min-width: 50px
-  position: relative
+  background: $teal-300
+
   &:hover
     background: $teal-500
+
     & > .chat__button__img
-      animation: bounce 0.4s linear forwards
+      animation: bounce .4s linear forwards
 
 .chat__button__img
   display: block
-  left: 15px
   position: absolute
   top: 11px
+  left: 15px
     
 .bounce-back
-  animation: bounce-back 0.4s linear forwards
+  animation: bounce-back .4s linear forwards
 
 .chat__viewport--container
   display: flex
   flex-direction: column-reverse
-  height: 100%
   width: 100%
+  height: 100%
   overflow-y: auto
 
 .chat__viewport
   display: flex
   flex-direction: column
-  gap: 16px
   width: 100%
+  gap: 16px
 
 .chat__message--user,
 .chat__message--bot
-  font-family: 'Inter'
-  font-size: 0.75rem
-  max-width: 80%
   width: fit-content
+  max-width: 80%
+  font-family: 'Inter'
+  font-size: .75rem
 
 .chat__message--user
   align-self: flex-end
-  border: 1px solid $zinc-300
-  border-radius: 16px 16px 0 16px
   padding: 8px 16px
+  border: 1px solid $zinc-300
+  border-radius: 16px 16px 0
 
 .chat__message--bot
-  align-items: flex-start
   display: flex
+  align-items: flex-start
   gap: 4px
+
   & > p
-    background: $zinc-200
-    border-radius: 0 16px 16px 16px
     padding: 8px 16px
+    border-radius: 0 16px 16px
+    background: $zinc-200
 
 .chat__message--date
   align-self: center
+  padding: 4px 8px
   border: 1px solid $zinc-200
   border-radius: 8px
   color: $zinc-800
   font-family: 'Inter'
-  font-size: 0.625rem
-  padding: 4px 8px
+  font-size: .625rem
 
 .chat__history--placeholder
-  align-items: center
   display: flex
+  align-items: center
   justify-content: center
-  transition: all 0.3s linear
   width: 100%
+  transition: .3s linear
+
   & > p
-    color: $zinc-400
     display: flex
-    font-size: 0.75rem
+    color: $zinc-400
+    font-size: .75rem
     gap: 4px
 
 .chat__history--placeholder-small
@@ -204,12 +214,12 @@
 
 @media (max-width: 768px)
   .chat--container
-    bottom: 80px
     display: flex
-    padding: 32px 16px 16px 16px
     right: 16px
+    bottom: 80px
     width: 90%
+    padding: 32px 16px 16px
 
   .chat__button--toggle
-    bottom: 16px
     right: 16px
+    bottom: 16px

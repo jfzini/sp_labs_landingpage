@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "sasslintConfig": ".sass-lint.yml",
+  "sasslintConfig": ".sasslintrc.json",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "style-lint": "sass-lint -v",
-    "style-lint:fix": "sass-lint-auto-fix -c .sass-lint.yml",
+    "style-lint:fix": "sass-lint-auto-fix -c .sasslintrc.json",
     "preview": "vite preview"
   },
   "dependencies": {

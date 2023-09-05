@@ -1,0 +1,49 @@
+{
+  "files": {
+    "include": "src/styles/*.sass",
+    "ignore": ["node_modules/**"]
+  },
+  "rules": {
+    "property-sort-order": [
+      1,
+      {
+        "order": "smacss"
+      }
+    ],
+    "class-name-format": [
+      1,
+      {
+        "convention": "hyphenatedbem"
+      }
+    ],
+    "no-color-literals": 0,
+    "nesting-depth": [
+      1,
+      {
+        "max-depth": 5
+      }
+    ],
+    "no-url-domains": 0,
+    "no-url-protocols": 0,
+    "no-vendor-prefixes": 0,
+    "no-misspelled-properties": [
+      1,
+      {
+        "extra-properties": ["gap", "grid-gap", "grid-row-gap", "grid-column-gap"]
+      }
+    ],
+    "no-qualifying-elements": [
+      1,
+      {
+        "allow-element-with-attribute": true
+      }
+    ],
+    "force-pseudo-nesting": 0,
+    "mixins-before-declarations": [
+      1,
+      {
+        "exclude": ["mobile", "tablet", "mobile-and-tablet"]
+      }
+    ]
+  }
+}
