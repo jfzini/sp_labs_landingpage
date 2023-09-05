@@ -9,7 +9,7 @@ export default function ChatButton() {
       <img
         src={arrowSendIcon}
         alt="enviar mensagem"
-        className={`chat__button__img ${mouseLeft ? 'bounce-back' : ''}`}
+        className={`chat__button__img ${mouseLeft && 'bounce-back'}`}
       />
     </button>
   );

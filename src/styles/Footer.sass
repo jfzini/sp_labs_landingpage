@@ -39,6 +39,7 @@
 .footer__anchor
   color: $zinc-800
   position: relative
+  cursor: default
   &:hover::after
     content: ''
     position: absolute
@@ -48,6 +49,16 @@
     height: 1px
     background: $zinc-600
     animation: appear 0.3s linear
+
+.footer__anchor__fade::after
+  content: ''
+  position: absolute
+  display: block
+  width: 100%
+  bottom: 1px
+  height: 1px
+  background: $zinc-600
+  animation: disappear 0.3s linear forwards
 
 .footer__hr
   width: 100%
