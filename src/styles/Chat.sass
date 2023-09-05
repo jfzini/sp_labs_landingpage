@@ -1,0 +1,213 @@
+@import variables
+@import animations
+  
+.chat__button--toggle
+  border: none
+  height: 48px
+  width: 48px
+  border-radius: 50%
+  background-color: $zinc-800
+  position: fixed
+  right: 32px
+  bottom: 32px
+  cursor: pointer
+  transition: all 0.3s linear
+  &:hover
+    background-color: $teal-300
+    & > svg
+      & > path
+        transition: all 0.3s linear
+        stroke: $zinc-800
+
+.chat__button--toggle__svg
+  display: block
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.chat--container
+  background: $white
+  border: 1px solid $zinc-800
+  border-radius: 32px
+  position: fixed
+  bottom: 96px
+  right: 32px
+  display: flex
+  width: 386px
+  height: 409px
+  padding: 32px 16px 16px 16px
+  flex-direction: column
+  align-items: flex-start
+  justify-content: space-between
+  gap: 16px
+  flex-shrink: 0
+  opacity: 0
+  animation: appear 0.3s linear forwards
+  transition: all 0.3s linear
+
+.chat--container--closing
+  animation: disappear 0.3s linear forwards
+
+.chat__header
+  display: flex
+  flex-direction: column
+  gap: 16px
+  padding-inline: 16px
+  width: 100%
+  margin-bottom: 16px
+  border-bottom: 1px solid $zinc-800
+
+.chat__header--toggle
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.chat__avatar--large
+  width: 40px
+  height: 40px
+  background: $zinc-800
+  border-radius: 50%
+  position: relative
+  & > img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.chat__header--toggle__button
+  display: flex
+  border: 1px solid $zinc-200
+  border-radius: 8px
+  padding: 4px 8px
+  background: $white
+  gap: 8px
+  align-items: center
+  color: $zinc-800
+  cursor: pointer
+
+.chat__header--salutation
+  font-family: 'Inter'
+  font-size: 1.25rem
+  font-style: normal
+  font-weight: 400
+  line-height: 320%
+
+.chat--container--large
+  height: 700px
+
+.chat__form
+  display: flex
+  gap: 8px
+  justify-content: space-between
+  width: 100%
+
+.chat__input
+  font-family: 'Inter'
+  font-size: 0.75rem
+  font-style: normal
+  font-weight: 400
+  height: 40px
+  padding-inline: 16px
+  border: 1px solid $zinc-400
+  border-radius: 16px
+  width: 100%
+  &::placeholder
+    color: $black
+  &:focus
+    outline: none
+    border: 1px solid $teal-500
+
+.chat__button
+  border: none
+  position: relative
+  min-width: 50px
+  height: 40px
+  border-radius: 16px
+  background: $teal-300
+  &:hover
+    background: $teal-500
+    & > .chat__button__img
+      animation: bounce 0.4s linear forwards
+
+.chat__button__img
+  position: absolute
+  display: block
+  top: 11px
+  left: 15px
+    
+.bounce-back
+  animation: bounce-back 0.4s linear forwards
+
+.chat__viewport--container
+  height: 100%
+  overflow-y: auto
+  display: flex
+  flex-direction: column-reverse
+
+.chat__viewport
+  display: flex
+  width: 100%
+  flex-direction: column
+  gap: 16px
+
+.chat__message--user,
+.chat__message--bot
+  font-family: 'Inter'
+  font-size: 0.75rem
+  width: fit-content
+  max-width: 80%
+
+.chat__message--user
+  border: 1px solid $zinc-300
+  border-radius: 16px 16px 0px 16px
+  padding: 8px 16px
+  align-self: flex-end
+
+.chat__message--bot
+  display: flex
+  align-items: flex-start
+  gap: 4px
+  & > p
+    background: $zinc-200
+    padding: 8px 16px
+    border-radius: 0px 16px 16px 16px
+
+.chat__message--date
+  font-family: 'Inter'
+  font-size: 0.625rem
+  color: $zinc-800
+  padding: 4px 8px
+  align-self: center
+  border: 1px solid $zinc-200
+  border-radius: 8px
+
+.chat__history--placeholder
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  transition: all 0.3s linear
+  & > p
+    display: flex
+    gap: 4px
+    color: $zinc-400
+    font-size: 0.75rem
+
+.chat__history--placeholder-small
+  height: 169px
+
+.chat__history--placeholder-large
+  height: 460px
+
+@media (max-width: 768px)
+  .chat--container
+    bottom: 80px
+    right: 16px
+    display: flex
+    width: 90%
+    padding: 32px 16px 16px 16px
+
+  .chat__button--toggle
+    right: 16px
+    bottom: 16px

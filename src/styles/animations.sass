@@ -1,8 +1,39 @@
-// appear animation
-
 @keyframes appear
   0%
     opacity: 0
 
   100%
     opacity: 1
+
+@keyframes disappear
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0
+
+@keyframes bounce
+  0%
+    transform: rotate(0deg)
+
+  40%
+    transform: rotate(-55deg)
+
+  70%
+    transform: rotate(-35deg)
+
+  100%
+    transform: rotate(-45deg)
+
+@keyframes bounce-back
+  0%
+    transform: rotate(-45deg)
+
+  40%
+    transform: rotate(10deg)
+
+  70%
+    transform: rotate(-10deg)
+
+  100%
+    transform: rotate(0deg)

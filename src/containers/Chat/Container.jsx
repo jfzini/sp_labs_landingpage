@@ -1,5 +1,14 @@
-export default function Container() {
+import ChatSection from './ChatSection/ChatSection';
+import ToggleChatButton from './components/ToggleChatButton';
+import { useSelector } from 'react-redux';
+
+export default function ChatContainer() {
+  const { open } = useSelector((state) => state.chatReducer);
+
   return (
-    <div>Container</div>
-  )
+    <>
+      <ToggleChatButton />
+      {open && <ChatSection />}
+    </>
+  );
 }

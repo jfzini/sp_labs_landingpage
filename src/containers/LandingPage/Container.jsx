@@ -4,7 +4,7 @@ import VideoSection from './Video/VideoSection';
 import ContactSection from './Contact/ContactSection';
 import Footer from './Footer/Footer';
 
-export default function Container() {
+export default function LandingPageContainer() {
   return (
     <div>
       <HeroSection />
