@@ -3,7 +3,7 @@ import '../../../styles/Video.sass';
 export default function VideoSection() {
   return (
     <section className="page-padding section--container al-item-center light-gray-bg">
-      <article className="article--container">
+      <article className="article--container w100--medium-screen">
         <h2 className="section--title extra-bold">Quem são, o que fazem, onde vivem?</h2>
         <p className="paragraph soft-black">
           Como não precisava embedar o vídeo do Rick Astley Remastered 4K 60FPS, coloquei aqui uma
