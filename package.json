@@ -3,10 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "sasslintConfig": ".sass-lint.yml",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "style-lint": "sass-lint -v",
+    "style-lint:fix": "sass-lint-auto-fix -c .sass-lint.yml",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -29,6 +32,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "sass": "^1.66.1",
+    "sass-lint": "^1.13.1",
+    "sass-lint-auto-fix": "^0.21.2",
     "vite": "^4.4.5"
   }
 }
