@@ -1,5 +1,5 @@
 import { closeModal, openModal } from './modal';
-import { openChat, closeChat, closingChat, expandChat, collapseChat } from './chat';
+import { openChat, closeChat, closingChat, expandChat, collapseChat, saveChat } from './chat';
 
 export {
   closeModal,
@@ -9,4 +9,5 @@ export {
   closingChat,
   expandChat,
   collapseChat,
+  saveChat,
 };

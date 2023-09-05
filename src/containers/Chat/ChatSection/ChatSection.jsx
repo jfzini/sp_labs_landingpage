@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import ChatHeader from './ChatHeader';
 import ChatForm from './ChatForm';
+import ChatViewPort from './ChatViewPort';
 
 export default function ChatSection() {
   const { closing, expanded } = useSelector((state) => state.chatReducer);
@@ -12,6 +13,7 @@ export default function ChatSection() {
       }`}
     >
       <ChatHeader />
+      <ChatViewPort />
       <ChatForm />
     </section>
   );

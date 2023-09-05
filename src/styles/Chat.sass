@@ -138,3 +138,53 @@
     
 .bounce-back
   animation: bounce-back 0.4s linear forwards
+
+.chat__viewport
+  display: flex
+  width: 100%
+  flex-direction: column
+  gap: 16px
+  overflow-y: auto
+
+.chat__message--user,
+.chat__message--bot
+  font-family: 'Inter'
+  font-size: 0.75rem
+  width: fit-content
+  max-width: 80%
+
+.chat__message--user
+  border: 1px solid $zinc-300
+  border-radius: 16px 16px 0px 16px
+  padding: 8px 16px
+  align-self: flex-end
+
+.chat__message--bot
+  display: flex
+  align-items: flex-start
+  gap: 4px
+  & > p
+    background: $zinc-200
+    padding: 8px 16px
+    border-radius: 0px 16px 16px 16px
+
+.chat__message--date
+  font-family: 'Inter'
+  font-size: 0.625rem
+  color: $zinc-800
+  padding: 4px 8px
+  align-self: center
+  border: 1px solid $zinc-200
+  border-radius: 8px
+
+.chat__history--placeholder
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  min-height: 100%
+  & > p
+    display: flex
+    gap: 4px
+    color: $zinc-400
+    font-size: 0.75rem

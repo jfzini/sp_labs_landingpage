@@ -3,6 +3,7 @@ const CLOSE_CHAT = 'CLOSE_CHAT';
 const CLOSING_CHAT = 'CLOSING_CHAT';
 const EXPAND_CHAT = 'EXPAND_CHAT';
 const COLLAPSE_CHAT = 'COLLAPSE_CHAT';
+const SAVE_CHAT = 'SAVE_CHAT';
 
 export const openChat = () => ({
   type: OPEN_CHAT,
@@ -22,4 +23,9 @@ export const expandChat = () => ({
 
 export const collapseChat = () => ({
   type: COLLAPSE_CHAT,
+});
+
+export const saveChat = (current) => ({
+  type: SAVE_CHAT,
+  payload: current,
 });
