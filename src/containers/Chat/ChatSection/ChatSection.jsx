@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import ChatHeader from './ChatHeader';
 import ChatForm from './ChatForm';
