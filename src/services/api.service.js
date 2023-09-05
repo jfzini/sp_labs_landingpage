@@ -12,7 +12,15 @@ const submitForm = async (data) => {
   return response;
 };
 
+const submitMessage = async (data) => {
+  const response = await axios.post('https://sp-labs.vercel.app/api/chat', {
+    ...data,
+  });
+  return response;
+};
+
 export default {
   fetchCases,
   submitForm,
+  submitMessage,
 };

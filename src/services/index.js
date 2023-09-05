@@ -1,3 +1,4 @@
 import api from './api.service';
+import lStorage from './localStorage.service';
 
-export { api };
+export { api, lStorage };
