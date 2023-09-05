@@ -11,6 +11,7 @@ export default function ChatForm() {
   const { register, handleSubmit, reset } = useForm();
 
   const submitMessage = async (data) => {
+    reset();
     const userMessage = { sender: 'user', question: data.question };
     lStorage.saveToLocalStorage('chatHistory', userMessage);
     dispatch(saveChat([userMessage]));
@@ -18,7 +19,6 @@ export default function ChatForm() {
     const botMessage = { sender: 'bot', answer: response.data };
     dispatch(saveChat([botMessage]));
     lStorage.saveToLocalStorage('chatHistory', botMessage);
-    reset();
   };
 
   return (

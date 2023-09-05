@@ -6,7 +6,7 @@ import ChatContent from './ChatContent';
 
 export default function ChatViewPort() {
   const [history, setHistory] = useState([]);
-  const { current } = useSelector((state) => state.chatReducer);
+  const { current, expanded } = useSelector((state) => state.chatReducer);
 
   useEffect(() => {
     const messages = lStorage.getFromLocalStorage('chatHistory');
@@ -16,16 +16,28 @@ export default function ChatViewPort() {
   }, []);
 
   return (
-    <div className="chat__viewport">
-      {history.map((message, index) => <ChatContent key={index} message={message} />)}
-      <div className='chat__history--placeholder'>
-        <p>
-          <span>Role para cima</span>
-          <img src={rollUpIcon} />
-          <span>para ver o histórico</span>
-        </p>
+    <div className="chat__viewport--container">
+      <div>
+        <div className="chat__viewport">
+          {history.map((message, index) => (
+            <ChatContent key={index} message={message} />
+          ))}
+          <div
+            className={`chat__history--placeholder chat__history--placeholder${
+              expanded ? '-large' : '-small'
+            }`}
+          >
+            <p>
+              <span>Role para cima</span>
+              <img src={rollUpIcon} />
+              <span>para ver o histórico</span>
+            </p>
+          </div>
+          {current.map((message, index) => (
+            <ChatContent key={index} message={message} />
+          ))}
+        </div>
       </div>
-      {current.map((message, index) => <ChatContent key={index} message={message} />)}
     </div>
   );
 }
