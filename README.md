@@ -8,6 +8,9 @@ A versão publicada da aplicação está disponível em: [https://sp-labs-landin
 
 Abaixo segue o vídeo de demonstração da aplicação:
 
+https://github.com/jfzini/sp_labs_landingpage/assets/122232543/344b2d95-89bb-4be9-af6f-8ea276d8a988
+
+___
 ### ✅ Pré-requisitos
 
 Para garantir o funcionamento correto da aplicação em ambiente local, é necessário que você tenha instalado:
