@@ -8,7 +8,7 @@ A versão publicada da aplicação está disponível em: [https://sp-labs-landin
 
 Abaixo segue o vídeo de demonstração da aplicação:
 
-https://github.com/jfzini/sp_labs_landingpage/assets/122232543/e451bfc5-386c-4137-b8cf-539c93f5aafd
+https://github.com/jfzini/sp_labs_landingpage/assets/122232543/bf6e9d9a-a2bb-4a0b-951b-72fc99f262c1
 
 ___
 ### ✅ Pré-requisitos
