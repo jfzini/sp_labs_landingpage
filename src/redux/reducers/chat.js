@@ -1,8 +1,13 @@
+import { lStorage } from '../../services';
+
+const history = lStorage.getFromLocalStorage('chatHistory');
+
 const INITIAL_STATE = {
   open: false,
   closing: false,
   expanded: false,
   current: [],
+  history: history || [],
 };
 
 const chatReducer = (state = INITIAL_STATE, action) => {
