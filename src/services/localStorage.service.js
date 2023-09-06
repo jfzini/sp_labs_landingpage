@@ -9,7 +9,7 @@ const saveToLocalStorage = (key, data='') => {
   if (previousData) {
     const todayExists = previousData.some((item) => item === today);
     if (!todayExists) {
-      localStorage.setItem(key, JSON.stringify([...previousData, today]));
+      return localStorage.setItem(key, JSON.stringify([...previousData, today, data]));
     }
     return localStorage.setItem(key, JSON.stringify([...previousData, data]));
   }
